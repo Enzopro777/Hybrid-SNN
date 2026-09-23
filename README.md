@@ -111,7 +111,7 @@ IA 1.6.29f/
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/Enzopro777/IA-SNN.git
+git clone https://github.com/Enzopro777/Hybrid-SNN.git
 cd "IA 1.6.29f"
 
 # 2. Instalar dependencias
