@@ -112,7 +112,7 @@ Hybrid-SNN/
 ```bash
 # 1. Clonar el repositorio
 git clone https://github.com/Enzopro777/Hybrid-SNN.git
-cd "IA 1.6.29f"
+cd Hybrid-SNN
 
 # 2. Instalar dependencias
 python setup_requirements.py
