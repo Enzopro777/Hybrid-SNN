@@ -1,4 +1,4 @@
-# IA SNN — Sistema de Inteligencia Artificial Neuronal de Spikes
+# Hybrid-SNN — Sistema de Inteligencia Artificial Neuronal de Spikes
 
 **Versión actual:** 1.6.29f — Readout Stability & Bridge Credit Control  
 **Autor:** Enzo ([@Enzopro777](https://github.com/Enzopro777))  
