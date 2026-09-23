@@ -1,0 +1,40 @@
+CausalProbe v0.4
+================
+
+La sonda mantiene instrumentación observacional para estudiar la cadena
+bloque -> evidencia -> decisión y ahora genera un contrato JSON explícito
+para coordinación entre IAs colaboradoras.
+
+El archivo causal_probe_results.json separa:
+- identidad de sesión y contadores;
+- contrato de runtime, unidades y semántica de métricas;
+- huellas SHA-256 de archivos críticos para detectar código incompatible;
+- métricas/acumuladores observados;
+- trials completos e incompletos;
+- análisis causal observacional y sus limitaciones;
+- estado de colaboración: hallazgos confirmados, preguntas abiertas y
+  siguientes acciones.
+
+Regla de interpretación:
+- confirmed_findings = hechos derivados directamente de mediciones;
+- causal_analysis.candidates = hipótesis/candidatos, no causalidad demostrada;
+- open_questions/next_actions = trabajo pendiente;
+- runtime_contract = contrato de compatibilidad entre consumidores.
+
+Una intervención controlada sigue siendo necesaria para convertir un candidato
+observacional en evidencia causal más fuerte.
+
+Atajo en simulación:
+  tecla 'p' = resumen + flush del CausalProbe.
+
+
+Actualización v0.7:
+- El CausalProbe declara el governor de Event Queue en su contrato.
+- High watermark de trial: 22000 eventos; low watermark: 14000.
+- No se omiten frames. Los eventos sinápticos débiles se limitan progresivamente solo bajo alta carga.
+
+--- CausalProbe v0.9 ---
+- health.event_queue y health.energy se calculan antes de las reglas que los consultan.
+- telemetry_integrity indica ok/degraded y conserva errores de observabilidad sin detener la simulacion.
+- prediction_match se separa de learned_readout_active/valid.
+- trials.evaluated_* y incomplete_total separan rendimiento evaluable de abortos operacionales.

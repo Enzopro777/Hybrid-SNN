@@ -1,0 +1,15 @@
+CAUSAL PIPELINE v1.0
+
+Objetivo: estabilizar Event Queue y evitar que energía regional transitoria/incorrecta se mezcle con salud neuronal.
+
+Cambios principales:
+- Backpressure sin bloqueo repetitivo a 22k; espera activa solo cerca del techo duro.
+- Governor sináptico más agresivo bajo congestión. La entrada sensorial permanece preservada.
+- Estadísticas de cola: producción-consumo, backlog listo máximo y tasa de drops del governor.
+- Energía regional publicada mediante actualización atómica y acotada; plasticidad e inhibición usan el mismo contrato.
+- CausalProbe reporta por separado energía neuronal y regional.
+- execution_identity para detectar discrepancias entre la carpeta ejecutada y la versión declarada.
+- Trials incompletos permanecen fuera de evaluación/aprendizaje.
+
+Próxima prueba:
+5-10 minutos, red limpia, sin restaurar checkpoints. Revisar health.event_queue y health.region_energy antes de alargar la sesión.

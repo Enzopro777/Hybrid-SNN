@@ -1,0 +1,19 @@
+IA 1.6.29f — validation
+
+Static/runtime checks performed on the delivered source tree:
+- python -m compileall -q . : PASS
+- pytest -q : PASS (217 tests)
+- runtime identity: IA-1.6.29f
+- latent workspace: 1.6.29f-latent-workspace-v7
+- homeostasis state: 1.6.29f-homeostasis-v2
+- journal path: trial_commit_1.6.29f.json
+- clean default: CLEAN_EXPERIMENT_DEFAULT=True
+- initial drive_ema: all pools 0.0
+- initial threshold offsets: all pools 0.0
+- initial effective thresholds: 1.55 for all pools
+- physical bridge sleep replay: disabled by default
+- archive: validated after packaging
+- saved-state/checkpoint files: none included in archive
+
+Recommended experiment:
+Start without simulation_state_* files, previous journals or checkpoints. Keep the same 60-frame trial contract and balanced five-class curriculum.

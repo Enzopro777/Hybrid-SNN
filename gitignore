@@ -1,0 +1,40 @@
+# Estado guardado de la red (generado en tiempo de ejecución)
+simulation_state_meta.pkl
+simulation_state_matrices.npz
+*.pkl
+*.npz
+
+# Journals y checkpoints
+trial_commit_*.json
+causal_probe_results.json
+*.json
+
+# Calibración guardada
+calibracion_*.json
+calibration_*.json
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# VS Code
+.vscode/
+
+# Archivos temporales
+*.tmp
+*.bak
+visualizer - copia.py

@@ -1,0 +1,1561 @@
+{
+  "schema_version": "causal-probe-results-v2",
+  "producer": {
+    "project": "IA-1.6.29f",
+    "component": "CausalProbe",
+    "version": "causal-probe-v1.5"
+  },
+  "session": {
+    "session_id": "d1b7278770c4481c8303a586e77b07d8",
+    "started_at": 1790178362.6740289,
+    "started_at_iso_utc": "2026-09-23T15:46:02.674029+00:00",
+    "generated_at": 1790178362.683653,
+    "generated_at_iso_utc": "2026-09-23T15:46:02.683653+00:00",
+    "event_counter": 0,
+    "events_retained": 0,
+    "events_total": 0,
+    "events_dropped_from_ring_buffer": 0
+  },
+  "runtime_contract": {
+    "project_version": "IA-1.6.29f",
+    "probe_version": "causal-probe-v1.5",
+    "schema_version": "causal-probe-results-v2",
+    "clock": {
+      "simulation_time_unit": "ms",
+      "wall_clock": "unix_seconds",
+      "generated_at_iso_utc": "2026-09-23T15:46:02.683764+00:00"
+    },
+    "temporal_core_version": null,
+    "measurement_semantics": {
+      "block_count": "observable outputs/items in a block for one frame",
+      "block_strength": "sum of non-negative intensity/strength values",
+      "evidence_value": "language input port value for each symbol; neural observational channel",
+      "evidence_active_threshold": "max(lang.edge_threshold, 0.10)",
+      "natural_spikes": "active neurons with last_spike within 50 ms of observed frame",
+      "causal_status": "observational_only_until_intervention",
+      "vision_telemetry": "per-frame normalized fovea trajectory; observational; no attention reward applied",
+      "readout_delivery_diagnostics": "source_event_to_pool_membrane_threshold snapshot"
+    },
+    "readout_contract": {
+      "evidence_ports_role": "neural observational pathway; not the learned classifier",
+      "detector_hypothesis_role": "heuristic detector score kept separate from evidence_*",
+      "readout_validity_rule": "prediction_match is not sufficient; learned_readout requires source_or_pool_spikes",
+      "prediction_match_semantics": "gt_equals_prediction is reported separately from readout activity/validity",
+      "learned_readout_validity": "source_fired_or_pool_spike_required",
+      "queue_diagnostics": "production_vs_consumption_and_future_event_pressure",
+      "queue_control_policy": "synaptic_backpressure_before_hard_cap; sensory_input_preserved",
+      "energy_scope": "neuronal_and_regional_energy_are_reported_separately",
+      "learned_readout_role": "neuronal classifier pathway evaluated from readout pools",
+      "latent_workspace": "post-perception recurrent latent workspace; guides bridge learning, not decision authority by default",
+      "latent_workspace_authority_default": false,
+      "readout_evidence_scoring": "instantaneous_spikes_plus_temporal_surprise_plus_presence_minus_slow_positive_history_bias",
+      "source_selection": "cortical_representation",
+      "source_selection_rationale": "readout sources must be explicitly role-tagged cortical_representation; FeatureBus, language infrastructure and monitor immortals are excluded",
+      "cortical_representation_diagnostics": "trial source identity, uniqueness, temporal bins and cross-trial Jaccard overlap",
+      "frame_timing_diagnostics": "wall duration, simulation duration, per-frame cadence and queue pressure",
+      "prediction_authority_during_letter_trials": "temporal_pool_spike_activity_when_readout_ready",
+      "readout_source_vthresh": 2.5,
+      "readout_source_input_strength_expected": [
+        3.0,
+        8.0
+      ],
+      "prediction_recording": "causal_probe_end_trial_uses_authoritative_trial_prediction",
+      "queue_governor": "causal_utility_budget_plus_safe_event_aggregation; severe_backlog_coalescing_reserved_for_noncausal_load",
+      "queue_backpressure": {
+        "high_watermark": 22000,
+        "low_watermark": 14000,
+        "severe_load_watermark": 23000,
+        "frames_never_skipped": true,
+        "causal_utility_budget": true,
+        "safe_event_aggregation": true,
+        "ready_backlog_coalescing": true
+      }
+    },
+    "network": {
+      "neurons": 0,
+      "max_neurons": 0,
+      "current_time": 0.0
+    },
+    "symbols": [
+      "X",
+      "O",
+      "T",
+      "A",
+      "E"
+    ],
+    "blocks_expected": [
+      "transductor",
+      "bordes_v",
+      "bordes_h",
+      "diagonales",
+      "esquinas",
+      "curvas",
+      "simetria",
+      "junctions",
+      "letras"
+    ],
+    "modules_present": {},
+    "source_manifest": {
+      "modules/causal_probe.py": "7075ff7e2d661e283f14db9f291c1031e8021cecb7f7ecb405b4c6550cbca232",
+      "modules/language_io.py": "7ed48a1d3f9824fb3e5a872d29964ea2ec2716d7e758ca91fbcd320d1d540293",
+      "modules/detector_letras.py": "e586bdfb4cdfec45a422a5ddd3c0b712057bde7e8937ddd1cbf6e2c0460fc047",
+      "engine/simulation.py": "536b6e38398f38c5ab53c04ee4cc0f6380ea346eddd5ca154b89a3e586da92fe",
+      "config.py": "4b2ae1495be66580bef9a57b25447b6ee08845f8408be106d14a6635a2c85fe5"
+    },
+    "execution_identity": {
+      "workspace_root": "IA 1.6.29e",
+      "probe_module_path": "/mnt/data/build_29f/IA_1.6.29e/IA 1.6.29e/modules/causal_probe.py",
+      "declared_project_version": "IA-1.6.29f",
+      "version_label_consistent": false
+    }
+  },
+  "state": {
+    "enabled": true,
+    "active_trial": null,
+    "simulation_time": 0.0,
+    "last_block_times": {},
+    "last_evidence": {
+      "X": 0.0,
+      "O": 0.0,
+      "T": 0.0,
+      "A": 0.0,
+      "E": 0.0
+    }
+  },
+  "metrics": {
+    "frames": 0,
+    "natural_spike_samples": 0,
+    "immortal_spike_samples": 0,
+    "blocks_seen": 0,
+    "trials_completed": 6,
+    "last_update": 0.0,
+    "trials_recorded": 6
+  },
+  "health": {
+    "status": "ok",
+    "errors": {},
+    "event_queue": {},
+    "energy": {},
+    "region_energy": {}
+  },
+  "telemetry_integrity": {
+    "status": "ok",
+    "errors": {},
+    "note": "Una falla de observabilidad no debe detener la simulación ni invalidar otros campos del snapshot."
+  },
+  "block_accumulators": {},
+  "symbol_accumulators": {},
+  "representation_diagnostics": {
+    "status": "insufficient_data",
+    "complete_trials_measured": 0,
+    "mean_pairwise_jaccard_same_label": null,
+    "mean_pairwise_jaccard_different_label": null,
+    "pair_count_same_label": 0,
+    "pair_count_different_label": 0,
+    "per_class": {}
+  },
+  "frame_timing_diagnostics": {
+    "status": "insufficient_data",
+    "complete_trials_measured": 0,
+    "mean_simulation_ms_per_wall_second": null,
+    "median_simulation_ms_per_wall_second": null,
+    "mean_frame_simulation_duration_ms": null,
+    "mean_frame_wall_duration_s": null,
+    "max_queue_before": null,
+    "max_queue_after": null
+  },
+  "vision_diagnostics": {
+    "status": "ok",
+    "trials_measured": 6,
+    "mean_ratio_in_target": 0.0,
+    "mean_path_length": 0.0,
+    "mean_saccade_count": 0.0,
+    "mean_fixation_count": 0.0,
+    "mean_distance_to_target": 0.0,
+    "per_class": {
+      "X": {
+        "trials": 2,
+        "mean_start_distance_pre_trial": 0.0,
+        "mean_ratio_in_target": 0.0,
+        "mean_path_length": 0.0,
+        "mean_saccade_count": 0.0,
+        "mean_fixation_count": 0.0
+      },
+      "O": {
+        "trials": 1,
+        "mean_start_distance_pre_trial": 0.0,
+        "mean_ratio_in_target": 0.0,
+        "mean_path_length": 0.0,
+        "mean_saccade_count": 0.0,
+        "mean_fixation_count": 0.0
+      },
+      "T": {
+        "trials": 1,
+        "mean_start_distance_pre_trial": 0.0,
+        "mean_ratio_in_target": 0.0,
+        "mean_path_length": 0.0,
+        "mean_saccade_count": 0.0,
+        "mean_fixation_count": 0.0
+      },
+      "A": {
+        "trials": 1,
+        "mean_start_distance_pre_trial": 0.0,
+        "mean_ratio_in_target": 0.0,
+        "mean_path_length": 0.0,
+        "mean_saccade_count": 0.0,
+        "mean_fixation_count": 0.0
+      },
+      "E": {
+        "trials": 1,
+        "mean_start_distance_pre_trial": 0.0,
+        "mean_ratio_in_target": 0.0,
+        "mean_path_length": 0.0,
+        "mean_saccade_count": 0.0,
+        "mean_fixation_count": 0.0
+      }
+    }
+  },
+  "pool_health_diagnostics": {
+    "status": "ok",
+    "per_symbol": {
+      "X": {
+        "target_trials": 2,
+        "non_target_trials": 4,
+        "mean_target_spikes": 1.0,
+        "mean_non_target_spikes": 0.0,
+        "non_target_false_activation_rate": 0.0,
+        "mean_drive_ema_target": 0.0,
+        "mean_drive_ema_non_target": 0.0,
+        "mean_inhibition_target": 0.0,
+        "mean_inhibition_non_target": 0.0
+      },
+      "O": {
+        "target_trials": 1,
+        "non_target_trials": 5,
+        "mean_target_spikes": 1.0,
+        "mean_non_target_spikes": 0.0,
+        "non_target_false_activation_rate": 0.0,
+        "mean_drive_ema_target": 0.0,
+        "mean_drive_ema_non_target": 0.0,
+        "mean_inhibition_target": 0.0,
+        "mean_inhibition_non_target": 0.0
+      },
+      "T": {
+        "target_trials": 1,
+        "non_target_trials": 5,
+        "mean_target_spikes": 1.0,
+        "mean_non_target_spikes": 0.0,
+        "non_target_false_activation_rate": 0.0,
+        "mean_drive_ema_target": 0.0,
+        "mean_drive_ema_non_target": 0.0,
+        "mean_inhibition_target": 0.0,
+        "mean_inhibition_non_target": 0.0
+      },
+      "A": {
+        "target_trials": 1,
+        "non_target_trials": 5,
+        "mean_target_spikes": 1.0,
+        "mean_non_target_spikes": 0.0,
+        "non_target_false_activation_rate": 0.0,
+        "mean_drive_ema_target": 0.0,
+        "mean_drive_ema_non_target": 0.0,
+        "mean_inhibition_target": 0.0,
+        "mean_inhibition_non_target": 0.0
+      },
+      "E": {
+        "target_trials": 1,
+        "non_target_trials": 5,
+        "mean_target_spikes": 1.0,
+        "mean_non_target_spikes": 0.0,
+        "non_target_false_activation_rate": 0.0,
+        "mean_drive_ema_target": 0.0,
+        "mean_drive_ema_non_target": 0.0,
+        "mean_inhibition_target": 0.0,
+        "mean_inhibition_non_target": 0.0
+      }
+    }
+  },
+  "plasticity_diagnostics": {
+    "status": "insufficient_data",
+    "trials_measured": 0
+  },
+  "curriculum": {
+    "session_counts": {
+      "X": 2,
+      "O": 1,
+      "T": 1,
+      "A": 1,
+      "E": 1
+    },
+    "persistent_counts": {
+      "X": 106,
+      "O": 106,
+      "T": 106,
+      "A": 105,
+      "E": 106
+    },
+    "unlocked": [
+      "X",
+      "O",
+      "T",
+      "A",
+      "E"
+    ],
+    "semantics": "session_counts = trials completos de esta ejecución; persistent_counts = acumulado restaurado/guardado"
+  },
+  "trials": {
+    "total_retained": 6,
+    "termination_counts": {
+      "completed": 6
+    },
+    "correct": 0,
+    "accuracy": 0.0,
+    "evaluated_total": 6,
+    "evaluated_correct": 0,
+    "evaluated_accuracy": 0.0,
+    "complete_total": 6,
+    "complete_correct": 0,
+    "complete_accuracy": 0.0,
+    "incomplete_total": 0,
+    "per_class": {
+      "X": {
+        "total": 2,
+        "correct": 0,
+        "accuracy": 0.0,
+        "mean_certainty": 0.1,
+        "predictions": {
+          "X": 2
+        }
+      },
+      "O": {
+        "total": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "mean_certainty": 0.1,
+        "predictions": {
+          "O": 1
+        }
+      },
+      "T": {
+        "total": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "mean_certainty": 0.1,
+        "predictions": {
+          "T": 1
+        }
+      },
+      "A": {
+        "total": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "mean_certainty": 0.1,
+        "predictions": {
+          "A": 1
+        }
+      },
+      "E": {
+        "total": 1,
+        "correct": 0,
+        "accuracy": 0.0,
+        "mean_certainty": 0.1,
+        "predictions": {
+          "E": 1
+        }
+      }
+    },
+    "confusion_matrix": {
+      "X": {
+        "X": 2,
+        "O": 0,
+        "T": 0,
+        "A": 0,
+        "E": 0
+      },
+      "O": {
+        "X": 0,
+        "O": 1,
+        "T": 0,
+        "A": 0,
+        "E": 0
+      },
+      "T": {
+        "X": 0,
+        "O": 0,
+        "T": 1,
+        "A": 0,
+        "E": 0
+      },
+      "A": {
+        "X": 0,
+        "O": 0,
+        "T": 0,
+        "A": 1,
+        "E": 0
+      },
+      "E": {
+        "X": 0,
+        "O": 0,
+        "T": 0,
+        "A": 0,
+        "E": 1
+      }
+    },
+    "recent": [
+      {
+        "id": 1,
+        "label": "X",
+        "ground_truth": "X",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "X",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 1,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 1,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "X",
+          "pool_spike_argmax": "X",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      },
+      {
+        "id": 2,
+        "label": "O",
+        "ground_truth": "O",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "O",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 0,
+          "O": 1,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 0,
+          "O": 1,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "O",
+          "pool_spike_argmax": "O",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      },
+      {
+        "id": 3,
+        "label": "T",
+        "ground_truth": "T",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "T",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 0,
+          "O": 0,
+          "T": 1,
+          "A": 0,
+          "E": 0
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 0,
+          "O": 0,
+          "T": 1,
+          "A": 0,
+          "E": 0
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "T",
+          "pool_spike_argmax": "T",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      },
+      {
+        "id": 4,
+        "label": "A",
+        "ground_truth": "A",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "A",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 1,
+          "E": 0
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 1,
+          "E": 0
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "A",
+          "pool_spike_argmax": "A",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      },
+      {
+        "id": 5,
+        "label": "E",
+        "ground_truth": "E",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "E",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 1
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 1
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "E",
+          "pool_spike_argmax": "E",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      },
+      {
+        "id": 6,
+        "label": "X",
+        "ground_truth": "X",
+        "start_t": 0.0,
+        "end_t": 1.0,
+        "frames": 0,
+        "expected_frames": 0,
+        "complete_frames": true,
+        "block_counts": {},
+        "block_strength": {},
+        "evidence_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "evidence_frames": {
+          "X": 0,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "evidence_first_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "evidence_last_t": {
+          "X": null,
+          "O": null,
+          "T": null,
+          "A": null,
+          "E": null
+        },
+        "prediction": "X",
+        "prediction_source": "learned_readout",
+        "certainty": 0.1,
+        "termination_reason": "completed",
+        "readout_frames": 0,
+        "readout_sources_fired_sum": 1,
+        "readout_pool_spikes": {
+          "X": 1,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "readout_weight_mean_last": {},
+        "readout_weight_delta_last": {},
+        "readout_source_spikes": 1,
+        "readout_source_unique": 0,
+        "readout_pool_unique": {
+          "X": 1,
+          "O": 0,
+          "T": 0,
+          "A": 0,
+          "E": 0
+        },
+        "detector_scores_peak": {
+          "X": 0.0,
+          "O": 0.0,
+          "T": 0.0,
+          "A": 0.0,
+          "E": 0.0
+        },
+        "readout_pool_delivery_diagnostics": {
+          "X": {},
+          "O": {},
+          "T": {},
+          "A": {},
+          "E": {}
+        },
+        "readout_pool_delivery_samples": [],
+        "cortical_source_indices": [],
+        "cortical_source_spike_counts": {},
+        "cortical_source_bin_counts": {},
+        "frame_timing": [],
+        "frame_timing_summary": {},
+        "vision_telemetry": {
+          "enabled": true,
+          "coordinate_space": "normalized_0_1",
+          "target": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.1
+          },
+          "fovea_start_pre_trial": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_start_effective": null,
+          "fovea_end": {
+            "x": 0.5,
+            "y": 0.5,
+            "radius": 0.15,
+            "vx": 0.0,
+            "vy": 0.0,
+            "speed": 0.0
+          },
+          "fovea_mean": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "min_distance_to_target": null,
+          "mean_distance_to_target": 0.0,
+          "frames_in_target": 0,
+          "ratio_in_target": 0.0,
+          "path_length": 0.0,
+          "largest_step": 0.0,
+          "largest_speed": 0.0,
+          "saccade_count": 0,
+          "fixation_count": 0,
+          "trace_stride": 1,
+          "trace": []
+        },
+        "decision_audit": {
+          "version": "1.6.29f-decision-audit-v4",
+          "authoritative_prediction": "X",
+          "pool_spike_argmax": "X",
+          "pool_drive_argmax": null,
+          "pool_rate_argmax": null,
+          "argmax_matches_authority": true,
+          "prediction_path_consistent": true,
+          "history_bias_index": 0.0,
+          "spike_total": 1,
+          "pools": {
+            "A": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "E": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "O": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "T": {
+              "spikes": 0,
+              "spike_share": 0.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            },
+            "X": {
+              "spikes": 1,
+              "spike_share": 1.0,
+              "drive_ema": 0.0,
+              "rate_ema": 0.0,
+              "inhibition": 0.0,
+              "threshold_mean": 0.0,
+              "threshold_min": 0.0
+            }
+          }
+        },
+        "termination_frame": 0,
+        "readout_pool_spikes_total": 0,
+        "readout_pool_ledger_consistent": false
+      }
+    ]
+  },
+  "causal_analysis": {
+    "status": "observational_only",
+    "candidates": [],
+    "limitations": [
+      "La precedencia temporal no demuestra causalidad por sí sola.",
+      "Los resultados dependen del protocolo y de la configuración vigente.",
+      "Una intervención controlada/repetición emparejada es necesaria para elevar el estatus causal."
+    ]
+  },
+  "collaboration": {
+    "role": "shared_state_contract",
+    "read_rule": "Separar hechos observados, inferencias y acciones pendientes.",
+    "authoritative_fields": [
+      "schema_version",
+      "session",
+      "runtime_contract",
+      "state",
+      "metrics",
+      "block_accumulators",
+      "symbol_accumulators",
+      "representation_diagnostics",
+      "frame_timing_diagnostics",
+      "trials",
+      "health",
+      "telemetry_integrity",
+      "causal_analysis"
+    ],
+    "confirmed_findings": [],
+    "open_questions": [
+      "La predicción correcta aún no está demostrada en los trials registrados.",
+      "No hay candidatos causales observacionales validados por el criterio actual."
+    ],
+    "next_actions": [
+      "Repetir trials completos y balanceados por símbolo.",
+      "Comparar ensayos con intervención contra controles emparejados.",
+      "Actualizar el estado solo a partir de nuevas mediciones, no de inferencias textuales."
+    ]
+  }
+}
