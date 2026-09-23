@@ -65,7 +65,7 @@ Cada bloque es un módulo Python independiente que se comunica con los demás me
 ## Estructura del proyecto
 
 ```
-IA 1.6.29f/
+Hybrid-SNN/
 │
 ├── menu_arranque.py        ← punto de entrada principal
 ├── main.py                 ← arranque directo (sin menú)
